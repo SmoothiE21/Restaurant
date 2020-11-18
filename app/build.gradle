@@ -7,6 +7,11 @@ plugins {
 }
 
 android {
+    //behozza az osztályt ami kell a navigationhoz, elérni ID szerint az elemeket
+    //data binding
+    buildFeatures {
+        dataBinding true
+    }
     compileSdkVersion 29
 
     defaultConfig {
