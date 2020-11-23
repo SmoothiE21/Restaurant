@@ -19,10 +19,12 @@ private lateinit var binding: FragmentProfileBinding
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        //bindig init
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
         //bindig értékadása
         val name=  binding.editTextTextPersonName.text.toString()
         Log.d("Helo",  name)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
+
 
         return binding.root
     }
