@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //adat elérés
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+
         //mozogni a fragmentek kozott
         val navController = findNavController(R.id.myNavHostFragment)
         // a menühöz, e miatt kell a data binding
