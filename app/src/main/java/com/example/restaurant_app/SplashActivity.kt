@@ -9,8 +9,7 @@ import android.os.PersistableBundle
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
-       // startActivity(new Intent(getApplicationContext(), MainActivity.class));
-     //  finish();
+
         val intent = Intent(this, MainActivity::class.java)
 
         startActivity(intent)

@@ -5,7 +5,7 @@
             <bitmap
                 android:src="@drawable/food"
                 android:gravity="center"
-                android:dither="false"
+                android:filter="true"
                 />
     </item>
 </layer-list>
