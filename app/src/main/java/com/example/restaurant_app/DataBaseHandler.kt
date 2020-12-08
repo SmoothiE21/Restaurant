@@ -36,4 +36,32 @@ class DataBaseHandler (var context: Context) : SQLiteOpenHelper(context, DATABAS
 
 
     }
+    fun readData() : MutableList<User>{
+        var list : MutableList<User> = ArrayList()
+
+        val db = this.readableDatabase
+        val query = "Select * from " + TABLE_NAME
+        val result = db.rawQuery(query,null)
+        if (result.moveToFirst()){
+            do{
+                var user = User()
+                user.id = result.getString(result.getColumnIndex(COL_ID)).toInt()
+                user.name = result.getString(result.getColumnIndex(COL_NAME))
+                user.age = result.getString(result.getColumnIndex(COL_AGE)).toInt()
+                list.add(user)
+            }while (result.moveToNext())
+        }
+
+
+            result.close()
+            db.close()
+            return list
+    }
+    fun deleteData(){
+        val db = this.writableDatabase
+        db.delete(TABLE_NAME,null,null )
+
+
+        db.close()
+    }
 }

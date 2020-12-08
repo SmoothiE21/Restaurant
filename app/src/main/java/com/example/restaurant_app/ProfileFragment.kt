@@ -29,13 +29,7 @@ private lateinit var binding: FragmentProfileBinding
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false)
         //bindig értékadása
-       // val name=  binding.editTextTextPersonName.text.toString()
-       // Log.d("Helo",  name)
 
-       // val view: View = inflater.inflate(R.layout.fragment_profile, container, false)
-       // val name: EditText = view.findViewById<EditText>(R.id.etvName)
-       // val age : EditText = view.findViewById<EditText>(R.id.etvAge)
-       // val binsert: Button = view.findViewById<Button>(R.id.buttoninsert)
         var db = context?.let { DataBaseHandler(context = it) }
 
         //insert data
@@ -53,6 +47,19 @@ private lateinit var binding: FragmentProfileBinding
 
         binding.buttoninsert.setOnClickListener{
             insert()
+        }
+
+        binding.buttonread.setOnClickListener{
+            var data = db?.readData()
+            binding.tvResult.text =""
+            for (i in 0..data?.size!! -1){
+                binding.tvResult.append("\nName: " + data.get(i).name + "\n\n Age: " + data.get(i).age + "\n")
+            }
+        }
+        binding.buttondelete.setOnClickListener{
+            db?.deleteData()
+            binding.buttonread.performClick()
+
         }
 
         return binding.root

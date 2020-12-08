@@ -14,8 +14,8 @@
             android:layout_width="96dp"
             android:layout_height="39dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="108dp"
-            android:text="Username"
+            android:layout_marginTop="64dp"
+            android:text="Personal Data:"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="112dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="1dp"
             android:ems="10"
             android:inputType="textPersonName"
@@ -40,27 +40,66 @@
             android:id="@+id/etvAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:inputType="number"
             android:text="Age"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etvName" />
 
         <Button
             android:id="@+id/buttoninsert"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="267dp"
+            android:layout_height="35dp"
             android:layout_marginBottom="64dp"
             android:text="Insert"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etvAge"
-            app:layout_constraintVertical_bias="0.507" />
+            app:layout_constraintVertical_bias="0.084" />
+
+        <Button
+            android:id="@+id/buttonread"
+            android:layout_width="267dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="64dp"
+            android:text="Read"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttoninsert"
+            app:layout_constraintVertical_bias="0.084" />
+
+        <Button
+            android:id="@+id/buttondelete"
+            android:layout_width="267dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="64dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.43"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonread"
+            app:layout_constraintVertical_bias="0.084" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="198dp"
+            android:layout_height="155dp"
+            android:layout_marginBottom="4dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.075"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttondelete"
+            app:layout_constraintVertical_bias="0.945" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
