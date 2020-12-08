@@ -11,41 +11,56 @@
 
         <TextView
             android:id="@+id/usernameTextview"
-            android:layout_width="99dp"
-            android:layout_height="53dp"
+            android:layout_width="96dp"
+            android:layout_height="39dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="108dp"
             android:text="Username"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.18"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/etvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="19dp"
-            android:layout_marginTop="108dp"
+            android:layout_marginTop="112dp"
             android:layout_marginEnd="1dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="Name"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/usernameTextview"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/insert"
+        <EditText
+            android:id="@+id/etvAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="Age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etvName" />
+
+        <Button
+            android:id="@+id/buttoninsert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="64dp"
             android:text="Insert"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.257"
+            app:layout_constraintHorizontal_bias="0.65"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/usernameTextview"
-            app:layout_constraintVertical_bias="0.277" />
+            app:layout_constraintTop_toBottomOf="@+id/etvAge"
+            app:layout_constraintVertical_bias="0.507" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

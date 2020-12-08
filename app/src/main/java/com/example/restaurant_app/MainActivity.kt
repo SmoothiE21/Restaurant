@@ -21,5 +21,6 @@ class MainActivity : AppCompatActivity() {
         val bottomNav = binding.bottomNavigationView
         //bottom nav inicializálás
         bottomNav?.setupWithNavController(navController)
+
     }
 }

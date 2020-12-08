@@ -32,7 +32,29 @@ private lateinit var binding: FragmentProfileBinding
        // val name=  binding.editTextTextPersonName.text.toString()
        // Log.d("Helo",  name)
 
-       
+       // val view: View = inflater.inflate(R.layout.fragment_profile, container, false)
+       // val name: EditText = view.findViewById<EditText>(R.id.etvName)
+       // val age : EditText = view.findViewById<EditText>(R.id.etvAge)
+       // val binsert: Button = view.findViewById<Button>(R.id.buttoninsert)
+        var db = context?.let { DataBaseHandler(context = it) }
+
+        //insert data
+        fun insert() {
+            if (binding.etvName.text.toString().isNotEmpty() &&
+                binding.etvAge.text.toString().isNotEmpty()
+            )
+            {
+                var user = User(binding.etvName.text.toString(), binding.etvAge.text.toString().toInt())
+
+                db?.insertData(user)
+            }
+        }
+
+
+        binding.buttoninsert.setOnClickListener{
+            insert()
+        }
+
         return binding.root
     }
 
