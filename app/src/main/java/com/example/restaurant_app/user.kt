@@ -4,9 +4,13 @@ class User{
     var id : Int=0
     var name : String = ""
     var age : Int = 0
-    constructor(name:String,age:Int){
+    var addr : String=""
+    var email: String=""
+    constructor(name:String,age:Int,addr:String,email:String){
         this.name=name
         this.age=age
+        this.addr=addr
+        this.email=email
 
     }
     constructor(){
