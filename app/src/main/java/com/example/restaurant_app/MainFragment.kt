@@ -30,6 +30,8 @@ class MainFragment : Fragment() {
         val viewModelFactory = RestViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(RestViewModel::class.java)
         viewModel.getRestaurants()
+        viewModel.myResponse.observe(viewLifecycleOwner,{ restaurants->})
+
         return view
     }
 
