@@ -69,6 +69,7 @@ private lateinit var binding: FragmentProfileBinding
                 binding.tvResult.append("\n USER: "+"\n\n Name: " + data.get(i).name + "\n\n Tel: 0" + data.get(i).age + "\n" + "\n Address: " + data.get(i).addr + "\n" + "\n Email: " + data.get(i).email)
             }
         }
+
         binding.buttondelete.setOnClickListener{
             db?.deleteData()
             binding.buttonread.performClick()
