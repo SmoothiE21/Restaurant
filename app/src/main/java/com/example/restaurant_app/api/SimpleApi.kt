@@ -5,6 +5,7 @@ import com.example.restaurant_app.model.Resdata
 
 import retrofit2.http.GET
 import retrofit2.http.Query
+import java.net.Inet4Address
 
 interface SimpleApi {
 
@@ -12,6 +13,8 @@ interface SimpleApi {
   suspend fun getPost(
     @Query("name") name:String? = null,
     @Query("country") country:String? = "US"
+
+
   ): Resdata
 
 }
