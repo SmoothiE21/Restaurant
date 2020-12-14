@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.restaurant_app.R
@@ -25,6 +26,10 @@ class MyAdapter:RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
         holder.itemView.restCity.text = myList[position].city.toString()
 
         Glide.with(holder.itemView.context).load(myList[position].image_url).into(holder.itemView.findViewById<ImageView>(R.id.iv_image)).view
+
+        holder.itemView.cv_cardView.setOnClickListener{
+        holder.itemView.findNavController().navigate(R.id.action_mainFragment_to_detailFragment2)
+        }
     }
 
     override fun getItemCount(): Int {

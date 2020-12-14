@@ -139,7 +139,19 @@
             app:layout_constraintTop_toBottomOf="@+id/etvAddr"
             app:srcCompat="@android:drawable/alert_light_frame" />
 
-
+        <ImageView
+            android:id="@+id/animation"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_marginEnd="16dp"
+            android:background="#084038"
+            android:src="@drawable/animation"
+            app:layout_constraintBottom_toTopOf="@+id/etvAge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.589"
+            app:layout_constraintStart_toEndOf="@+id/usernameTextview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

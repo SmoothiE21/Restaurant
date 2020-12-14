@@ -21,6 +21,7 @@ import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import com.example.restaurant_app.databinding.FragmentProfileBinding
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_profile.*
 import java.io.ByteArrayOutputStream
 
 
@@ -57,7 +58,30 @@ private lateinit var binding: FragmentProfileBinding
             }
         }
 
+        binding.animation.setOnClickListener {
+            animation.animate().apply {
+                duration = 4000
+                rotationXBy(360f)
 
+
+            }.withEndAction {
+                animation.animate().apply {
+                    duration = 4000
+                    rotationYBy(360f)
+                }
+            }.withEndAction {
+                animation.animate().apply {
+                    duration = 4000
+                    rotationXBy(360f)
+                }
+            }.withEndAction {
+
+                animation.animate().apply {
+                    duration = 4000
+                    rotationYBy(360f)
+                }.start()
+            }
+        }
         binding.buttoninsert.setOnClickListener{
             insert()
         }
